@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading"></h1>
+
+  <div class="col-md-4">
+    <img src="assets/Discourse_Caitlin-Millar.jpg" border="5" style="display: inline"/>
+  </div>
+  <div class="col-md-8">
+    <h4 style="color: #777777">Caitlin is passionate about data and science communication. Her skills include data analysis, data visualization and web development.</h4>
+    <hr>
+    <h4> Learn More: </h4>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <h5>
+            <a class="learn-more" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h5>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <br>
+
+</div>
